@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  CC微博
 //
 //  Created by mac on 15/9/21.
@@ -8,13 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+
     }
 
 }
-

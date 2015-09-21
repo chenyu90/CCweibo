@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0464169D1BB021710094D869 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0464169C1BB021710094D869 /* AppDelegate.swift */; };
-		0464169F1BB021710094D869 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0464169E1BB021710094D869 /* ViewController.swift */; };
 		046416A41BB021710094D869 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046416A31BB021710094D869 /* Assets.xcassets */; };
 		046416B21BB021710094D869 /* CC__Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046416B11BB021710094D869 /* CC__Tests.swift */; };
 		046416BD1BB021710094D869 /* CC__UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046416BC1BB021710094D869 /* CC__UITests.swift */; };
+		046416DE1BB02D6E0094D869 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046416DD1BB02D6E0094D869 /* MainViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		046416E01BB02D8F0094D869 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046416DF1BB02D8F0094D869 /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +35,6 @@
 /* Begin PBXFileReference section */
 		046416991BB021710094D869 /* CC微博.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CC微博.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0464169C1BB021710094D869 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0464169E1BB021710094D869 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		046416A31BB021710094D869 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		046416A81BB021710094D869 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		046416AD1BB021710094D869 /* CC微博Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CC微博Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +43,8 @@
 		046416B81BB021710094D869 /* CC微博UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CC微博UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		046416BC1BB021710094D869 /* CC__UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CC__UITests.swift; sourceTree = "<group>"; };
 		046416BE1BB021710094D869 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		046416DD1BB02D6E0094D869 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		046416DF1BB02D8F0094D869 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,8 +95,8 @@
 		0464169B1BB021710094D869 /* CC微博 */ = {
 			isa = PBXGroup;
 			children = (
+				046416D31BB02A7B0094D869 /* Classes */,
 				0464169C1BB021710094D869 /* AppDelegate.swift */,
-				0464169E1BB021710094D869 /* ViewController.swift */,
 				046416A31BB021710094D869 /* Assets.xcassets */,
 				046416A81BB021710094D869 /* Info.plist */,
 			);
@@ -117,6 +119,87 @@
 				046416BE1BB021710094D869 /* Info.plist */,
 			);
 			path = "CC微博UITests";
+			sourceTree = "<group>";
+		};
+		046416D31BB02A7B0094D869 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				046416D41BB02A7B0094D869 /* Model(业务模型) */,
+				046416D51BB02A7B0094D869 /* Tools(工具) */,
+				046416D61BB02A7B0094D869 /* View(控制器&视图) */,
+				046416DC1BB02A7B0094D869 /* ViewModel */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		046416D41BB02A7B0094D869 /* Model(业务模型) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model(业务模型)";
+			sourceTree = "<group>";
+		};
+		046416D51BB02A7B0094D869 /* Tools(工具) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Tools(工具)";
+			sourceTree = "<group>";
+		};
+		046416D61BB02A7B0094D869 /* View(控制器&视图) */ = {
+			isa = PBXGroup;
+			children = (
+				046416D71BB02A7B0094D869 /* Discover */,
+				046416D81BB02A7B0094D869 /* Home */,
+				046416D91BB02A7B0094D869 /* Main */,
+				046416DA1BB02A7B0094D869 /* Message */,
+				046416DB1BB02A7B0094D869 /* Profile */,
+			);
+			path = "View(控制器&视图)";
+			sourceTree = "<group>";
+		};
+		046416D71BB02A7B0094D869 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		046416D81BB02A7B0094D869 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				046416DF1BB02D8F0094D869 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		046416D91BB02A7B0094D869 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				046416DD1BB02D6E0094D869 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		046416DA1BB02A7B0094D869 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		046416DB1BB02A7B0094D869 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		046416DC1BB02A7B0094D869 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,8 +330,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0464169F1BB021710094D869 /* ViewController.swift in Sources */,
+				046416DE1BB02D6E0094D869 /* MainViewController.swift in Sources */,
 				0464169D1BB021710094D869 /* AppDelegate.swift in Sources */,
+				046416E01BB02D8F0094D869 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +544,7 @@
 				046416C31BB021710094D869 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		046416C41BB021710094D869 /* Build configuration list for PBXNativeTarget "CC微博Tests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +553,7 @@
 				046416C61BB021710094D869 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		046416C71BB021710094D869 /* Build configuration list for PBXNativeTarget "CC微博UITests" */ = {
 			isa = XCConfigurationList;
@@ -476,6 +562,7 @@
 				046416C91BB021710094D869 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
